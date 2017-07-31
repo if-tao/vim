@@ -1,5 +1,9 @@
 #!/bin/bash
 rm -f ~/.vimrc
 rm -rf ~/.vim
-mv -f ~/.vimrc_old ~/.vimrc
-mv -f ~/.vim_old ~/.vim
+if [ -e "~/.vimrc_old" ]; then
+    mv -f ~/.vimrc_old ~/.vimrc
+fi
+if [ -e "~/.vim_old.tar.gz" ]; then
+    tar -zxPf ~/.vim_old.tar.gz ~/.vim
+fi
