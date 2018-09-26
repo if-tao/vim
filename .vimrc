@@ -3,6 +3,8 @@
 
 " Environmenti - Encoding, Indent, Fold {{{ "
 
+" limit for gitcommit
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " set help to chinese
 if version >= 603
